@@ -12,8 +12,7 @@
 			'00D7a00000053wC',
 			'ADU_ChannelMenu'
 		);
-		
-		// embedded_svc.menu.reorder(["ADU_FirstItem"]);
+	
 	};
 
 	if (!window.embedded_svc || !window.embedded_svc.menu) {
@@ -22,6 +21,7 @@
 		s.onload = function() {
 			initESW(null);
 		};
+		embedded_svc.menu.reorder(["ADU_FirstItem"]);
 		document.body.appendChild(s);
 	} else {
 		initESW('https://service.force.com');
