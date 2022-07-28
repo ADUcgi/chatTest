@@ -144,11 +144,11 @@ function checkChatStatus() {
   	var div = document.getElementById('chatDiv');
 	var chat = embedded_svc.settings.displayHelpButton;
 	 
-	if (chat === false){
-		document.write(chat);
+	if (chat === "false"){
+		document.write("false");
 		div.style.display = 'block';	
 	} else {
-		document.write(chat);
+		document.write("true");
 		div.style.display = 'none';
 	}
 }
