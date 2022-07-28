@@ -142,21 +142,19 @@
 		embedded_svc.bootstrapEmbeddedService();
 	}
 	
-	function hideButton() {
-	  var chatActive = embedded_svc.settings.displayHelpButton;
-	  if (chatActive) {
-	    .chatDiv.style.display = "none";
-	  } else {
-	    .chatDiv.style.display = "block";
-	  }
-	}
+	var chatButton = document.getElementById('chatButton'); // Assumes element with id='button'
+
+	chatButton.onclick = function() {
+	    var div = document.getElementById('chatDiv');
+	    div.style.display = 'block';
+	};
 </script>
 
 
 <body>
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
-	</br> <button class="chatButton"  onclick="bootstrapChat();hideButton();">
+	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat();hideButton();">
 			Je fais le test! .chatdiv
 		</button>
 	</div>
