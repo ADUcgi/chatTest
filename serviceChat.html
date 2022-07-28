@@ -138,6 +138,16 @@
 </script>
 
 <script type='text/javascript'>
+	document.addEventListener("click", checkChatStatus);
+
+function checkChatStatus() {
+  if(embedded_svc.settings.displayHelpButton){
+  	var div = document.getElementById('chatDiv');
+	div.style.display = 'block';
+  }
+	  
+}
+	
 	function bootstrapChat() {
 		var div = document.getElementById('chatDiv');
 	    	div.style.display = 'none';
