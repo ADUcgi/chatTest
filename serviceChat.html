@@ -143,10 +143,12 @@
 function checkChatStatus() {
   	var div = document.getElementById('chatDiv');
 	var chat = embedded_svc.settings.displayHelpButton;
-	document.write(chat); 
+	 
 	if (chat === false){
+		document.write(chat);
 		div.style.display = 'block';	
 	} else {
+		document.write(chat);
 		div.style.display = 'none';
 	}
 }
@@ -164,7 +166,7 @@ function checkChatStatus() {
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
 	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat()">
-			Je fais le test! switch 3
+			Je fais le test! switch 4
 		</button>
 	</div>
 </body>
