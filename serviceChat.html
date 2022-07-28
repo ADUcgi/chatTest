@@ -139,23 +139,19 @@
 
 <script type='text/javascript'>
 	function bootstrapChat() {
+		var div = document.getElementById('chatDiv');
+	    	div.style.display = 'block';
 		embedded_svc.bootstrapEmbeddedService();
 	}
 	
-	var chatButton = document.getElementById('chatButton'); // Assumes element with id='button'
-
-	chatButton.onclick = function() {
-	    var div = document.getElementById('chatDiv');
-	    div.style.display = 'block';
-	};
 </script>
 
 
 <body>
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
-	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat();hideButton();">
-			Je fais le test! chat button
+	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat()">
+			Je fais le test! on click
 		</button>
 	</div>
 </body>
