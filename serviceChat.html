@@ -138,26 +138,15 @@
 </script>
 
 <script type='text/javascript'>
-	window.addEventListener("click", checkChatStatus);
+window.addEventListener("click", checkChatStatus);
 
 function checkChatStatus() {
-  	var div = document.getElementById('chatDiv');
-	var chat = embedded_svc.settings.displayHelpButton;
-	 
-	if (chat === false){
-		document.write("false");
-		div.style.display = 'block';	
-	} else {
-		document.write("true");
-		div.style.display = 'none';
-	}
+
+function bootstrapChat() {
+	var div = document.getElementById('chatDiv');
+	div.style.display = 'none';
+	embedded_svc.bootstrapEmbeddedService();
 }
-	
-	function bootstrapChat() {
-		var div = document.getElementById('chatDiv');
-	    	div.style.display = 'none';
-		embedded_svc.bootstrapEmbeddedService();
-	}
 	
 </script>
 
@@ -166,7 +155,27 @@ function checkChatStatus() {
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
 	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat()">
-			Je fais le test! switch 6
+			Je fais le test! switch 7
 		</button>
 	</div>
 </body>
+
+<script type='text/javascript'>
+	window.addEventListener("click", checkChatStatus);
+
+	function checkChatStatus() {
+		var div = document.getElementById('chatDiv');
+		var chat = embedded_svc.settings.displayHelpButton;
+
+		if (chat === false){
+			document.write("false");
+			div.style.display = 'block';	
+		} else {
+			document.write("true");
+			div.style.display = 'none';
+		}
+	}
+	
+
+	
+</script>
