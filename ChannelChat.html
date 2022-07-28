@@ -21,9 +21,10 @@
 		s.setAttribute('src', 'https://virbac--partial.my.salesforce.com/embeddedservice/menu/fab.min.js');
 		s.onload = function() {
 			initESW(null);
-			embedded_svc.settings.displayHelpButton = true;
+			embedded_svc.settings.displayHelpButton = false;
 		};
 		document.body.appendChild(s);
+		embedded_svc.settings.displayHelpButton = false;
 	} else {
 		initESW('https://service.force.com');
 	}
