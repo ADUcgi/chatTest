@@ -15,8 +15,7 @@
 	    border-radius: 5px;
 	    font-size: 75%;
 	    border-style: none;
-	    -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+	    transform: translateX(35%);
 	}
 	
 	.chatButton:hover {
@@ -34,7 +33,6 @@
 	    right: 10px;
 	    height:10%;
 	    width:15%;
-	    border:1px solid black;
 	    border-radius: 5px;
 	}
 	
@@ -88,7 +86,7 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.displayHelpButton = false; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
@@ -124,8 +122,7 @@
 				isOfflineSupportEnabled: true
 			}
 		);
-		
-		embedded_svc.settings.displayHelpButton = false;
+
 	};
 
 	if (!window.embedded_svc) {
@@ -160,7 +157,7 @@
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
 	</br> <button class="chatButton"  onclick="bootstrapChat();hideButton();">
-			Je fais le test! new
+			Je fais le test!
 		</button>
 	</div>
 </body>
