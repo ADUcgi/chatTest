@@ -142,7 +142,12 @@
 
 function checkChatStatus() {
   	var div = document.getElementById('chatDiv');
-	div.style.display = 'block';	  
+	var chat = embedded_svc.settings.displayHelpButton;
+	if (chat === false){
+		div.style.display = 'block';	
+	} else {
+		div.style.display = 'none';
+	}
 }
 	
 	function bootstrapChat() {
