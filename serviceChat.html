@@ -144,10 +144,10 @@
 	
 	function hideButton() {
 	  var chatActive = embedded_svc.settings.displayHelpButton;
-	  if (chatActive === false) {
-	    chatDiv.style.display = "block";
+	  if (chatActive) {
+	    .chatDiv.style.display = "none";
 	  } else {
-	    chatDiv.style.display = "none";
+	    .chatDiv.style.display = "block";
 	  }
 	}
 </script>
@@ -157,7 +157,7 @@
 	<div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
 	</br> <button class="chatButton"  onclick="bootstrapChat();hideButton();">
-			Je fais le test!
+			Je fais le test! .chatdiv
 		</button>
 	</div>
 </body>
