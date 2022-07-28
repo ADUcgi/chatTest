@@ -13,7 +13,7 @@
 			'ADU_ChannelMenu'
 		);
 		
-		embedded_svc.settings.displayHelpButton = true;
+		
 	};
 
 	if (!window.embedded_svc || !window.embedded_svc.menu) {
@@ -21,6 +21,7 @@
 		s.setAttribute('src', 'https://virbac--partial.my.salesforce.com/embeddedservice/menu/fab.min.js');
 		s.onload = function() {
 			initESW(null);
+			embedded_svc.settings.displayHelpButton = true;
 		};
 		document.body.appendChild(s);
 	} else {
