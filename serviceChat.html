@@ -7,7 +7,6 @@
 		outline: 1px solid #005290;
 	}
 	.chatButton {
-	    padding: 5%;
 	    display:block;
 	    background-color: #005290;
 	    color: white;
@@ -141,6 +140,7 @@
 function bootstrapChat() {
 	var div = document.getElementById('chatDiv');
 	div.style.display = 'none';
+	embedded_svc.settings.displayHelpButton = true;
 	embedded_svc.bootstrapEmbeddedService();
 }
 	
