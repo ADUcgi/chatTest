@@ -159,6 +159,12 @@ embedded_svc.addEventHandler("afterDestroy", function(data) {
 	div.style.display = 'block';
 });	
 	
+embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
+    console.log("onChatEndedByChasitor event was fired. " );
+		var div = document.getElementById('chatDiv');
+	div.style.display = 'block';
+});
+	
 	
 </script>
 
