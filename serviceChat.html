@@ -165,6 +165,12 @@ embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
 	div.style.display = 'block';
 });
 	
+embedded_svc.addEventHandler("chatEndedState", function(data) {
+    console.log("chatEndedState event was fired. " );
+		var div = document.getElementById('chatDiv');
+	div.style.display = 'block';
+});	
+	
 	
 </script>
 
