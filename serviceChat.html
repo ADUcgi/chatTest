@@ -25,8 +25,6 @@
 	
 	.chatDiv {
 	  transition: box-shadow .3s;
-	  width: 300px;
-	  height: 500px;
 	  margin: 50px;
 	  border-radius:10px;
 	  border: 1px solid #ccc;
@@ -130,7 +128,7 @@
 		
 		embedded_svc.addEventHandler("afterDestroy", function(data) {
 		    console.log("afterDestroy event was fired. ");
-			var div = document.getElementById('chatImg');
+			var div = document.getElementById('chatDiv');
 			div.style.display = 'block';
 		});	
 
@@ -152,7 +150,7 @@
 
 function bootstrapChat() {
 	embedded_svc.bootstrapEmbeddedService();
-	var div = document.getElementById('chatImg');
+	var div = document.getElementById('chatDiv');
 	div.style.display = 'none';
 }
 	
