@@ -36,6 +36,18 @@
 	    border-radius: 5px;
 	}
 	
+	.chatImg {
+	  transition: box-shadow .3s;
+	  margin: 50px;
+	  border-radius:10px;
+	  border: 1px solid #ccc;
+	  float: left;
+
+	}
+	.chatImg:hover {
+	  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+	}
+	
 </style>
 
 <!-- Start of Invitations -->
@@ -125,7 +137,7 @@
 		
 		embedded_svc.addEventHandler("afterDestroy", function(data) {
 		    console.log("afterDestroy event was fired. ");
-			var div = document.getElementById('chatDiv');
+			var div = document.getElementById('chatImg');
 			div.style.display = 'block';
 		});	
 
@@ -147,28 +159,20 @@
 
 function bootstrapChat() {
 	embedded_svc.bootstrapEmbeddedService();
-	var div = document.getElementById('chatDiv');
+	var div = document.getElementById('chatImg');
 	div.style.display = 'none';
 }
-	
-window.onclick = myFunction;
-function myFunction() {
-	var div = document.getElementById('chatDiv');
-	if(embedded_svc.settings.displayHelpButton == 'true')
-		div.style.display = div.style.display;
-	else
-		div.style.display = div.style.display;
-}	
-	
 	
 </script>
 
 
 <body>
-	<div id="chatDiv" class="chatDiv">
+	<!-- <div id="chatDiv" class="chatDiv">
 		<label>Un chien et un chat sur 3 sont en surpoids. </br> Et le vôtre? </label>
 	</br> <button id="chatButton" class="chatButton"  onclick="bootstrapChat()">
 			Je fais le test!
 		</button>
-	</div>
+	</div> -->
+	
+	<img id="chatImg" src="https://fr.virbac.com/modules/virbac-static-resources-module/img/content/virbac-logo-228x112.png" alt="chat bot button" onclick="bootstrapChat()" />
 </body>
