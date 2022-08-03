@@ -123,19 +123,19 @@
 			}
 		);
 		
-		embedded_svc.addCustomEventListener("afterDestroy", function(data) {
+		embedded_svc.addEventHandler("afterDestroy", function(data) {
 		    console.log("afterDestroy event was fired. ");
 			var div = document.getElementById('chatDiv');
 			div.style.display = 'block';
 		});	
 
-		embedded_svc.addCustomEventListener("onChatEndedByChasitor", function(data) {
+		embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
 		    console.log("onChatEndedByChasitor event was fired. " );
 				var div = document.getElementById('chatDiv');
 			div.style.display = 'block';
 		});
 
-		embedded_svc.addCustomEventListener("chatEndedState", function(data) {
+		embedded_svc.addEventHandler("chatEndedState", function(data) {
 		    console.log("chatEndedState event was fired. " );
 				var div = document.getElementById('chatDiv');
 			div.style.display = 'block';
