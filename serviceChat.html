@@ -7,22 +7,6 @@
 		outline: 1px solid #005290;
 	}
 	
-	.chatButton {
-	    padding: 2%;
-	    display:block;
-	    background-color: #005290;
-	    color: white;
-	    text-align:center;
-	    border-radius: 5px;
-	    font-size: 100%;
-	    border-style: none;
-	}
-	
-	.chatButton:hover {
-	    background-color: #DCDCDC;
-	    color: #005290;
-	}
-	
 	.chatDiv {
 	  transition: box-shadow .3s;
 	  margin: 50px;
@@ -38,7 +22,6 @@
 	.chatDiv:hover {
 	  box-shadow: 0 0 30px rgba(33,33,33); 
 	}
-	
 </style>
 
 <!-- Start of Invitations -->
@@ -111,8 +94,8 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://virbac--partial.my.salesforce.com',
-			'https://partial-virbac.cs189.force.com/serviceconso',
+			'https://virbac--partial.sandbox.my.salesforce.com',
+			'https://virbac--partial.sandbox.my.site.com/serviceconso',
 			gslbBaseURL,
 			'00D7a00000053wC',
 			'Bot_Test',
@@ -130,13 +113,12 @@
 		    console.log("afterDestroy event was fired. ");
 			var div = document.getElementById('chatDiv');
 			div.style.display = 'block';
-		});	
-
+		});
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://virbac--partial.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://virbac--partial.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
